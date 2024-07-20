@@ -1,5 +1,8 @@
 /// <reference types="cypress" />
 
+
+
+
 describe('Homepage', () => {
     it('should load successfully', () => {
       cy.visit("https://www.tomektomasik.pl")
@@ -7,7 +10,9 @@ describe('Homepage', () => {
 
     })
   })
+
   
+  //basic navigation tests
   describe('Navigation', () => {
     beforeEach(() => {
       cy.visit('https://www.tomektomasik.pl')
@@ -36,3 +41,4 @@ describe('Homepage', () => {
       })
     })
   })
+
