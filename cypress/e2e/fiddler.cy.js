@@ -104,4 +104,20 @@ describe('Last.fm Fiddler', () => {
             cy.get('#currentPage').should('contain', '1')
         })
     })
-})
+
+    it('should fetch and display tracks for the selected date', () => {
+        // Select date 26.06.2024
+        cy.get('#username').type('do_not_exist')
+        cy.get('#scrobbleDate').type('2024-06-26');
+
+        // Click button
+        cy.get('#fetchByDateButton').click();
+
+        // Wait for data to load
+        cy.wait(2000);
+
+        // Verify that data is loaded
+        cy.get('#dataContainer').should('be.visible');
+        cy.get('#dataContainer').children().should('have.length.greaterThan', 0); // Check that there is at least one track
+    });
+});
