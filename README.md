@@ -1,0 +1,1 @@
+This repository contains the testing suite for Cepeen.github.io (my humble portfolio), focused on ensuring the reliability and accuracy of the application. The suite currently includes basic end-to-end (E2E) tests created with Cypress.
